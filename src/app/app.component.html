@@ -1,0 +1,7 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<li hidden *ngFor="let data of weatherData">
+  Date:{{data.DateTime | date:'d/M/y HH:mm'}} Feel:{{data.IconPhrase}} Temperature:{{data.Temperature.Value}} {{data.Temperature.Unit}}
+  <img [src]="data.WeatherIcon<10?imgBaseUrl+'0'+data.WeatherIcon+'-s.png':imgBaseUrl+data.WeatherIcon+'-s.png'">
+</li>
+
+<app-component2 hidden></app-component2>
