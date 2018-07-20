@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import {Service1Service} from './service1.service';
 @Component({
   selector: 'app-root',
@@ -10,9 +10,9 @@ export class AppComponent {
   weatherData:any=[];
   imgBaseUrl="https://developer.accuweather.com/sites/default/files/";
   constructor(private service:Service1Service){
+ 
   this.service.getWeatherData((data)=>{
     this.weatherData=data;
   });
   }
-  
 }
